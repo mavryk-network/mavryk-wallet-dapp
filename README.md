@@ -1,35 +1,35 @@
-# TempleWallet DApp Module
+# MavrykWallet DApp Module
 
-This module is required to provide communication between DApps and Temple Wallet, it exposes unified interface for this interaction.
+This module is required to provide communication between DApps and Mavryk Wallet, it exposes unified interface for this interaction.
 
 ## 🚀 Quick Start
 
 ### Install
 
 ```bash
-yarn add @taquito/taquito @temple-wallet/dapp
+yarn add @mavrykdynamics/taquito @mavrykdynamics/mavryk-wallet-dapp
 ```
 
 ### Usage
 
 ```typescript
-import { TempleWallet } from "@temple-wallet/dapp";
+import { MavrykWallet } from "@mavrykdynamics/mavryk-wallet-dapp";
 
 (async () => {
   try {
-    const available = await TempleWallet.isAvailable();
+    const available = await MavrykWallet.isAvailable();
     if (!available) {
-      throw new Error("Temple Wallet not installed");
+      throw new Error("Mavryk Wallet not installed");
     }
 
     // Note:
 
-    // use `TempleWallet.isAvailable` method only after web application fully loaded.
+    // use `MavrykWallet.isAvailable` method only after web application fully loaded.
 
-    // Alternatively, you can use the method `TempleWallet.onAvailabilityChange`
+    // Alternatively, you can use the method `MavrykWallet.onAvailabilityChange`
     // that tracks availability in real-time .
 
-    const wallet = new TempleWallet("My Super DApp");
+    const wallet = new MavrykWallet("My Super DApp");
     await wallet.connect("carthagenet");
     const tezos = wallet.toTezos();
 
@@ -55,23 +55,23 @@ import { TempleWallet } from "@temple-wallet/dapp";
 #### Check permissions
 
 ```typescript
-import { TempleWallet } from "@temple-wallet/dapp";
+import { MavrykWallet } from "@mavrykdynamics/mavryk-wallet-dapp";
 
 (async () => {
   try {
-    const available = await TempleWallet.isAvailable();
+    const available = await MavrykWallet.isAvailable();
     if (!available) {
-      throw new Error("Temple Wallet not installed");
+      throw new Error("Mavryk Wallet not installed");
     }
 
-    const permission = await TempleWallet.getCurrentPermission();
-    // Alternatively, you can use the method `TempleWallet.onPermissionChange`
+    const permission = await MavrykWallet.getCurrentPermission();
+    // Alternatively, you can use the method `MavrykWallet.onPermissionChange`
     // that tracks current permission in real-time.
 
     console.info(permission);
     // prints "{ rpc: string, pkh: string, publicKey: string }" if permission exists, "null" - if not.
 
-    const wallet = new TempleWallet("My Super DApp", permission);
+    const wallet = new MavrykWallet("My Super DApp", permission);
 
     console.info(wallet.connected);
     // prints "true" if permission exists, "false" - if not.
@@ -92,11 +92,11 @@ import { TempleWallet } from "@temple-wallet/dapp";
 #### Sign
 
 ```typescript
-import { TempleWallet } from "@temple-wallet/dapp";
+import { MavrykWallet } from "@mavrykdynamics/mavryk-wallet-dapp";
 
 (async () => {
   try {
-    const wallet = new TempleWallet("My Super DApp");
+    const wallet = new MavrykWallet("My Super DApp");
     // ...
 
     // Only hex strings
@@ -117,7 +117,7 @@ You can find the example of Counter DApp in [this repo](https://github.com/madfi
 
 You can explore auto generated [full API Docs here](docs/README.md).
 
-Probably you would be most interested in the [TempleWallet class](docs/classes/templewallet.md) methods.
+Probably you would be most interested in the [MavrykWallet class](docs/classes/mavrykwallet.md) methods.
 
 ## Local Development
 

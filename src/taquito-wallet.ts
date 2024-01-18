@@ -9,7 +9,7 @@ import {
   WalletTransferParams,
   WalletOriginateParams,
   WalletIncreasePaidStorageParams,
-} from "@taquito/taquito";
+} from "@mavrykdynamics/taquito";
 
 import {
   isAvailable,
@@ -20,22 +20,22 @@ import {
   requestOperation,
   requestSign,
   requestBroadcast,
-  TempleWalletError,
+  MavrykWalletError,
 } from "./client";
 
-import { TempleDAppNetwork, TempleDAppPermission } from "./types";
+import { MavrykWalletDAppNetwork, MavrykWalletDAppPermission } from "./types";
 
-export class TempleWallet implements WalletProvider {
+export class MavrykWallet implements WalletProvider {
   static isAvailable = isAvailable;
   static onAvailabilityChange = onAvailabilityChange;
   static getCurrentPermission = getCurrentPermission;
   static onPermissionChange = onPermissionChange;
 
-  permission: TempleDAppPermission = null;
+  permission: MavrykWalletDAppPermission = null;
 
   constructor(
     private appName: string,
-    existingPermission?: TempleDAppPermission
+    existingPermission?: MavrykWalletDAppPermission
   ) {
     if (existingPermission) {
       this.permission = existingPermission;
@@ -53,7 +53,7 @@ export class TempleWallet implements WalletProvider {
     return tezos;
   }
 
-  async connect(network: TempleDAppNetwork, opts = { forcePermission: false }) {
+  async connect(network: MavrykWalletDAppNetwork, opts = { forcePermission: false }) {
     const perm = await requestPermission(
       network,
       { name: this.appName },
@@ -62,13 +62,18 @@ export class TempleWallet implements WalletProvider {
     this.permission = perm;
   }
 
-  reconnect(network: TempleDAppNetwork) {
+  reconnect(network: MavrykWalletDAppNetwork) {
     return this.connect(network, { forcePermission: true });
   }
 
   async getPKH() {
     assertConnected(this.permission);
     return this.permission.pkh;
+  }
+
+  async getPK() {
+    assertConnected(this.permission);
+    return this.permission.publicKey;
   }
 
   async mapTransferParamsToWalletParams(
@@ -161,15 +166,15 @@ export class TempleWallet implements WalletProvider {
   }
 }
 
-export class NotConnectedTempleWalletError extends TempleWalletError {
-  name = "TempleWalletNotConnected";
+export class NotConnectedMavrykWalletError extends MavrykWalletError {
+  name = "MavrykWalletNotConnected";
   message =
-    "You need to connect TempleWallet by calling templeWallet.connect() first";
+    "You need to connect MavrykWallet by calling mavrykWallet.connect() first";
 }
 
-function assertConnected(perm: TempleDAppPermission): asserts perm {
+function assertConnected(perm: MavrykWalletDAppPermission): asserts perm {
   if (!perm) {
-    throw new NotConnectedTempleWalletError();
+    throw new NotConnectedMavrykWalletError();
   }
 }
 

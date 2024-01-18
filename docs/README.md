@@ -1,47 +1,47 @@
-[@temple-wallet/dapp](README.md)
+[@mavrykdynamics/mavryk-wallet-dapp](README.md)
 
-# @temple-wallet/dapp
+# @mavrykdynamics/mavryk-wallet-dapp
 
 ## Index
 
 ### Enumerations
 
-* [TempleDAppErrorType](enums/templedapperrortype.md)
-* [TempleDAppMessageType](enums/templedappmessagetype.md)
-* [TemplePageMessageType](enums/templepagemessagetype.md)
+* [MavrykWalletDAppErrorType](enums/mavrykwalletdapperrortype.md)
+* [MavrykWalletDAppMessageType](enums/mavrykwalletdappmessagetype.md)
+* [MavrykWalletPageMessageType](enums/mavrykwalletpagemessagetype.md)
 
 ### Classes
 
-* [InvalidParamsTempleWalletError](classes/invalidparamstemplewalleterror.md)
-* [NotConnectedTempleWalletError](classes/notconnectedtemplewalleterror.md)
-* [NotFoundTempleWalletError](classes/notfoundtemplewalleterror.md)
-* [NotGrantedTempleWalletError](classes/notgrantedtemplewalleterror.md)
-* [TempleWallet](classes/templewallet.md)
-* [TempleWalletError](classes/templewalleterror.md)
+* [InvalidParamsMavrykWalletError](classes/invalidparamsmavrykwalleterror.md)
+* [NotConnectedMavrykWalletError](classes/notconnectedmavrykwalleterror.md)
+* [NotFoundMavrykWalletError](classes/notfoundmavrykwalleterror.md)
+* [NotGrantedMavrykWalletError](classes/notgrantedmavrykwalleterror.md)
+* [MavrykWallet](classes/mavrykwallet.md)
+* [MavrykWalletError](classes/mavrykwalleterror.md)
 
 ### Interfaces
 
-* [TempleDAppBroadcastRequest](interfaces/templedappbroadcastrequest.md)
-* [TempleDAppBroadcastResponse](interfaces/templedappbroadcastresponse.md)
-* [TempleDAppGetCurrentPermissionRequest](interfaces/templedappgetcurrentpermissionrequest.md)
-* [TempleDAppGetCurrentPermissionResponse](interfaces/templedappgetcurrentpermissionresponse.md)
-* [TempleDAppMessageBase](interfaces/templedappmessagebase.md)
-* [TempleDAppMetadata](interfaces/templedappmetadata.md)
-* [TempleDAppOperationRequest](interfaces/templedappoperationrequest.md)
-* [TempleDAppOperationResponse](interfaces/templedappoperationresponse.md)
-* [TempleDAppPermissionRequest](interfaces/templedapppermissionrequest.md)
-* [TempleDAppPermissionResponse](interfaces/templedapppermissionresponse.md)
-* [TempleDAppSignRequest](interfaces/templedappsignrequest.md)
-* [TempleDAppSignResponse](interfaces/templedappsignresponse.md)
-* [TemplePageMessage](interfaces/templepagemessage.md)
+* [MavrykWalletDAppBroadcastRequest](interfaces/mavrykwalletdappbroadcastrequest.md)
+* [MavrykWalletDAppBroadcastResponse](interfaces/mavrykwalletdappbroadcastresponse.md)
+* [MavrykWalletDAppGetCurrentPermissionRequest](interfaces/mavrykwalletdappgetcurrentpermissionrequest.md)
+* [MavrykWalletDAppGetCurrentPermissionResponse](interfaces/mavrykwalletdappgetcurrentpermissionresponse.md)
+* [MavrykWalletDAppMessageBase](interfaces/mavrykwalletdappmessagebase.md)
+* [MavrykWalletDAppMetadata](interfaces/mavrykwalletdappmetadata.md)
+* [MavrykWalletDAppOperationRequest](interfaces/mavrykwalletdappoperationrequest.md)
+* [MavrykWalletDAppOperationResponse](interfaces/mavrykwalletdappoperationresponse.md)
+* [MavrykWalletDAppPermissionRequest](interfaces/mavrykwalletdapppermissionrequest.md)
+* [MavrykWalletDAppPermissionResponse](interfaces/mavrykwalletdapppermissionresponse.md)
+* [MavrykWalletDAppSignRequest](interfaces/mavrykwalletdappsignrequest.md)
+* [MavrykWalletDAppSignResponse](interfaces/mavrykwalletdappsignresponse.md)
+* [MavrykWalletPageMessage](interfaces/mavrykwalletpagemessage.md)
 
 ### Type aliases
 
-* [TempleDAppMessage](README.md#templedappmessage)
-* [TempleDAppNetwork](README.md#templedappnetwork)
-* [TempleDAppPermission](README.md#templedapppermission)
-* [TempleDAppRequest](README.md#templedapprequest)
-* [TempleDAppResponse](README.md#templedappresponse)
+* [MavrykWalletDAppMessage](README.md#mavrykwalletdappmessage)
+* [MavrykWalletDAppNetwork](README.md#mavrykwalletdappnetwork)
+* [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission)
+* [MavrykWalletDAppRequest](README.md#mavrykwalletdapprequest)
+* [MavrykWalletDAppResponse](README.md#mavrykwalletdappresponse)
 
 ### Functions
 
@@ -63,59 +63,59 @@
 
 ## Type aliases
 
-###  TempleDAppMessage
+###  MavrykWalletDAppMessage
 
-Ƭ **TempleDAppMessage**: *[TempleDAppRequest](README.md#templedapprequest) | [TempleDAppResponse](README.md#templedappresponse)*
+Ƭ **MavrykWalletDAppMessage**: *[MavrykWalletDAppRequest](README.md#mavrykwalletdapprequest) | [MavrykWalletDAppResponse](README.md#mavrykwalletdappresponse)*
 
-*Defined in [types.ts:1](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/types.ts#L1)*
-
-___
-
-###  TempleDAppNetwork
-
-Ƭ **TempleDAppNetwork**: *"mainnet" | "ithacanet" | "hangzhounet" | "idiazabalnet" | "granadanet" | "edo2net" | "florencenet" | "sandbox" | object*
-
-*Defined in [types.ts:115](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/types.ts#L115)*
+*Defined in [types.ts:1](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L1)*
 
 ___
 
-###  TempleDAppPermission
+###  MavrykWalletDAppNetwork
 
-Ƭ **TempleDAppPermission**: *object | null*
+Ƭ **MavrykWalletDAppNetwork**: *"mainnet" | "ithacanet" | "hangzhounet" | "idiazabalnet" | "granadanet" | "edo2net" | "florencenet" | "sandbox" | object*
 
-*Defined in [types.ts:109](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/types.ts#L109)*
+*Defined in [types.ts:115](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L115)*
+
+___
+
+###  MavrykWalletDAppPermission
+
+Ƭ **MavrykWalletDAppPermission**: *object | null*
+
+*Defined in [types.ts:109](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L109)*
 
 Misc
 
 ___
 
-###  TempleDAppRequest
+###  MavrykWalletDAppRequest
 
-Ƭ **TempleDAppRequest**: *[TempleDAppGetCurrentPermissionRequest](interfaces/templedappgetcurrentpermissionrequest.md) | [TempleDAppPermissionRequest](interfaces/templedapppermissionrequest.md) | [TempleDAppOperationRequest](interfaces/templedappoperationrequest.md) | [TempleDAppSignRequest](interfaces/templedappsignrequest.md) | [TempleDAppBroadcastRequest](interfaces/templedappbroadcastrequest.md)*
+Ƭ **MavrykWalletDAppRequest**: *[MavrykWalletDAppGetCurrentPermissionRequest](interfaces/mavrykwalletdappgetcurrentpermissionrequest.md) | [MavrykWalletDAppPermissionRequest](interfaces/mavrykwalletdapppermissionrequest.md) | [MavrykWalletDAppOperationRequest](interfaces/mavrykwalletdappoperationrequest.md) | [MavrykWalletDAppSignRequest](interfaces/mavrykwalletdappsignrequest.md) | [MavrykWalletDAppBroadcastRequest](interfaces/mavrykwalletdappbroadcastrequest.md)*
 
-*Defined in [types.ts:3](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/types.ts#L3)*
+*Defined in [types.ts:3](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L3)*
 
 ___
 
-###  TempleDAppResponse
+###  MavrykWalletDAppResponse
 
-Ƭ **TempleDAppResponse**: *[TempleDAppGetCurrentPermissionResponse](interfaces/templedappgetcurrentpermissionresponse.md) | [TempleDAppPermissionResponse](interfaces/templedapppermissionresponse.md) | [TempleDAppOperationResponse](interfaces/templedappoperationresponse.md) | [TempleDAppSignResponse](interfaces/templedappsignresponse.md) | [TempleDAppBroadcastResponse](interfaces/templedappbroadcastresponse.md)*
+Ƭ **MavrykWalletDAppResponse**: *[MavrykWalletDAppGetCurrentPermissionResponse](interfaces/mavrykwalletdappgetcurrentpermissionresponse.md) | [MavrykWalletDAppPermissionResponse](interfaces/mavrykwalletdapppermissionresponse.md) | [MavrykWalletDAppOperationResponse](interfaces/mavrykwalletdappoperationresponse.md) | [MavrykWalletDAppSignResponse](interfaces/mavrykwalletdappsignresponse.md) | [MavrykWalletDAppBroadcastResponse](interfaces/mavrykwalletdappbroadcastresponse.md)*
 
-*Defined in [types.ts:10](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/types.ts#L10)*
+*Defined in [types.ts:10](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L10)*
 
 ## Functions
 
 ###  assertConnected
 
-▸ **assertConnected**(`perm`: [TempleDAppPermission](README.md#templedapppermission)): *asserts perm*
+▸ **assertConnected**(`perm`: [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission)): *asserts perm*
 
-*Defined in [taquito-wallet.ts:156](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L156)*
+*Defined in [taquito-wallet.ts:156](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L156)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`perm` | [TempleDAppPermission](README.md#templedapppermission) |
+`perm` | [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission) |
 
 **Returns:** *asserts perm*
 
@@ -125,7 +125,7 @@ ___
 
 ▸ **assertResponse**(`condition`: any): *asserts condition*
 
-*Defined in [client.ts:204](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L204)*
+*Defined in [client.ts:204](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L204)*
 
 **Parameters:**
 
@@ -139,9 +139,9 @@ ___
 
 ###  createError
 
-▸ **createError**(`payload`: any): *[TempleWalletError](classes/templewalleterror.md)‹›*
+▸ **createError**(`payload`: any): *[MavrykWalletError](classes/mavrykwalleterror.md)‹›*
 
-*Defined in [client.ts:179](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L179)*
+*Defined in [client.ts:179](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L179)*
 
 **Parameters:**
 
@@ -149,7 +149,7 @@ Name | Type |
 ------ | ------ |
 `payload` | any |
 
-**Returns:** *[TempleWalletError](classes/templewalleterror.md)‹›*
+**Returns:** *[MavrykWalletError](classes/mavrykwalleterror.md)‹›*
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **formatOpParams**(`op`: any): *any*
 
-*Defined in [taquito-wallet.ts:162](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L162)*
+*Defined in [taquito-wallet.ts:162](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L162)*
 
 **Parameters:**
 
@@ -173,7 +173,7 @@ ___
 
 ▸ **getCurrentPermission**(): *Promise‹null | object›*
 
-*Defined in [client.ts:82](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L82)*
+*Defined in [client.ts:82](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L82)*
 
 **Returns:** *Promise‹null | object›*
 
@@ -183,7 +183,7 @@ ___
 
 ▸ **isAvailable**(): *Promise‹boolean›*
 
-*Defined in [client.ts:15](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L15)*
+*Defined in [client.ts:15](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L15)*
 
 **Returns:** *Promise‹boolean›*
 
@@ -193,7 +193,7 @@ ___
 
 ▸ **onAvailabilityChange**(`callback`: function): *(Anonymous function)*
 
-*Defined in [client.ts:42](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L42)*
+*Defined in [client.ts:42](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L42)*
 
 **Parameters:**
 
@@ -215,19 +215,19 @@ ___
 
 ▸ **onPermissionChange**(`callback`: function): *(Anonymous function)*
 
-*Defined in [client.ts:62](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L62)*
+*Defined in [client.ts:62](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L62)*
 
 **Parameters:**
 
 ▪ **callback**: *function*
 
-▸ (`permission`: [TempleDAppPermission](README.md#templedapppermission)): *void*
+▸ (`permission`: [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`permission` | [TempleDAppPermission](README.md#templedapppermission) |
+`permission` | [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission) |
 
 **Returns:** *(Anonymous function)*
 
@@ -235,16 +235,16 @@ ___
 
 ###  permissionsAreEqual
 
-▸ **permissionsAreEqual**(`aPerm`: [TempleDAppPermission](README.md#templedapppermission), `bPerm`: [TempleDAppPermission](README.md#templedapppermission)): *boolean*
+▸ **permissionsAreEqual**(`aPerm`: [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission), `bPerm`: [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission)): *boolean*
 
-*Defined in [client.ts:171](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L171)*
+*Defined in [client.ts:171](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L171)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`aPerm` | [TempleDAppPermission](README.md#templedapppermission) |
-`bPerm` | [TempleDAppPermission](README.md#templedapppermission) |
+`aPerm` | [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission) |
+`bPerm` | [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission) |
 
 **Returns:** *boolean*
 
@@ -252,17 +252,17 @@ ___
 
 ###  request
 
-▸ **request**(`payload`: [TempleDAppRequest](README.md#templedapprequest)): *Promise‹[TempleDAppGetCurrentPermissionResponse](interfaces/templedappgetcurrentpermissionresponse.md) | [TempleDAppPermissionResponse](interfaces/templedapppermissionresponse.md) | [TempleDAppOperationResponse](interfaces/templedappoperationresponse.md) | [TempleDAppSignResponse](interfaces/templedappsignresponse.md) | [TempleDAppBroadcastResponse](interfaces/templedappbroadcastresponse.md)›*
+▸ **request**(`payload`: [MavrykWalletDAppRequest](README.md#mavrykwalletdapprequest)): *Promise‹[MavrykWalletDAppGetCurrentPermissionResponse](interfaces/mavrykwalletdappgetcurrentpermissionresponse.md) | [MavrykWalletDAppPermissionResponse](interfaces/mavrykwalletdapppermissionresponse.md) | [MavrykWalletDAppOperationResponse](interfaces/mavrykwalletdappoperationresponse.md) | [MavrykWalletDAppSignResponse](interfaces/mavrykwalletdappsignresponse.md) | [MavrykWalletDAppBroadcastResponse](interfaces/mavrykwalletdappbroadcastresponse.md)›*
 
-*Defined in [client.ts:140](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L140)*
+*Defined in [client.ts:140](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L140)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`payload` | [TempleDAppRequest](README.md#templedapprequest) |
+`payload` | [MavrykWalletDAppRequest](README.md#mavrykwalletdapprequest) |
 
-**Returns:** *Promise‹[TempleDAppGetCurrentPermissionResponse](interfaces/templedappgetcurrentpermissionresponse.md) | [TempleDAppPermissionResponse](interfaces/templedapppermissionresponse.md) | [TempleDAppOperationResponse](interfaces/templedappoperationresponse.md) | [TempleDAppSignResponse](interfaces/templedappsignresponse.md) | [TempleDAppBroadcastResponse](interfaces/templedappbroadcastresponse.md)›*
+**Returns:** *Promise‹[MavrykWalletDAppGetCurrentPermissionResponse](interfaces/mavrykwalletdappgetcurrentpermissionresponse.md) | [MavrykWalletDAppPermissionResponse](interfaces/mavrykwalletdapppermissionresponse.md) | [MavrykWalletDAppOperationResponse](interfaces/mavrykwalletdappoperationresponse.md) | [MavrykWalletDAppSignResponse](interfaces/mavrykwalletdappsignresponse.md) | [MavrykWalletDAppBroadcastResponse](interfaces/mavrykwalletdappbroadcastresponse.md)›*
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 ▸ **requestBroadcast**(`signedOpBytes`: string): *Promise‹string›*
 
-*Defined in [client.ts:131](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L131)*
+*Defined in [client.ts:131](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L131)*
 
 **Parameters:**
 
@@ -286,7 +286,7 @@ ___
 
 ▸ **requestOperation**(`sourcePkh`: string, `opParams`: any): *Promise‹string›*
 
-*Defined in [client.ts:111](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L111)*
+*Defined in [client.ts:111](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L111)*
 
 **Parameters:**
 
@@ -301,16 +301,16 @@ ___
 
 ###  requestPermission
 
-▸ **requestPermission**(`network`: [TempleDAppNetwork](README.md#templedappnetwork), `appMeta`: [TempleDAppMetadata](interfaces/templedappmetadata.md), `force`: boolean): *Promise‹object›*
+▸ **requestPermission**(`network`: [MavrykWalletDAppNetwork](README.md#mavrykwalletdappnetwork), `appMeta`: [MavrykWalletDAppMetadata](interfaces/mavrykwalletdappmetadata.md), `force`: boolean): *Promise‹object›*
 
-*Defined in [client.ts:92](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L92)*
+*Defined in [client.ts:92](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L92)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`network` | [TempleDAppNetwork](README.md#templedappnetwork) |
-`appMeta` | [TempleDAppMetadata](interfaces/templedappmetadata.md) |
+`network` | [MavrykWalletDAppNetwork](README.md#mavrykwalletdappnetwork) |
+`appMeta` | [MavrykWalletDAppMetadata](interfaces/mavrykwalletdappmetadata.md) |
 `force` | boolean |
 
 **Returns:** *Promise‹object›*
@@ -321,7 +321,7 @@ ___
 
 ▸ **requestSign**(`sourcePkh`: string, `payload`: string): *Promise‹string›*
 
-*Defined in [client.ts:121](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L121)*
+*Defined in [client.ts:121](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L121)*
 
 **Parameters:**
 
@@ -336,14 +336,14 @@ ___
 
 ###  send
 
-▸ **send**(`msg`: [TemplePageMessage](interfaces/templepagemessage.md)): *void*
+▸ **send**(`msg`: [MavrykWalletPageMessage](interfaces/mavrykwalletpagemessage.md)): *void*
 
-*Defined in [client.ts:210](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L210)*
+*Defined in [client.ts:210](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L210)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`msg` | [TemplePageMessage](interfaces/templepagemessage.md) |
+`msg` | [MavrykWalletPageMessage](interfaces/mavrykwalletpagemessage.md) |
 
 **Returns:** *void*

@@ -1,24 +1,24 @@
-export type TempleDAppMessage = TempleDAppRequest | TempleDAppResponse;
+export type MavrykWalletDAppMessage = MavrykWalletDAppRequest | MavrykWalletDAppResponse;
 
-export type TempleDAppRequest =
-  | TempleDAppGetCurrentPermissionRequest
-  | TempleDAppPermissionRequest
-  | TempleDAppOperationRequest
-  | TempleDAppSignRequest
-  | TempleDAppBroadcastRequest;
+export type MavrykWalletDAppRequest =
+  | MavrykWalletDAppGetCurrentPermissionRequest
+  | MavrykWalletDAppPermissionRequest
+  | MavrykWalletDAppOperationRequest
+  | MavrykWalletDAppSignRequest
+  | MavrykWalletDAppBroadcastRequest;
 
-export type TempleDAppResponse =
-  | TempleDAppGetCurrentPermissionResponse
-  | TempleDAppPermissionResponse
-  | TempleDAppOperationResponse
-  | TempleDAppSignResponse
-  | TempleDAppBroadcastResponse;
+export type MavrykWalletDAppResponse =
+  | MavrykWalletDAppGetCurrentPermissionResponse
+  | MavrykWalletDAppPermissionResponse
+  | MavrykWalletDAppOperationResponse
+  | MavrykWalletDAppSignResponse
+  | MavrykWalletDAppBroadcastResponse;
 
-export interface TempleDAppMessageBase {
-  type: TempleDAppMessageType;
+export interface MavrykWalletDAppMessageBase {
+  type: MavrykWalletDAppMessageType;
 }
 
-export enum TempleDAppMessageType {
+export enum MavrykWalletDAppMessageType {
   GetCurrentPermissionRequest = "GET_CURRENT_PERMISSION_REQUEST",
   GetCurrentPermissionResponse = "GET_CURRENT_PERMISSION_RESPONSE",
   PermissionRequest = "PERMISSION_REQUEST",
@@ -35,67 +35,67 @@ export enum TempleDAppMessageType {
  * Messages
  */
 
-export interface TempleDAppGetCurrentPermissionRequest
-  extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.GetCurrentPermissionRequest;
+export interface MavrykWalletDAppGetCurrentPermissionRequest
+  extends MavrykWalletDAppMessageBase {
+  type: MavrykWalletDAppMessageType.GetCurrentPermissionRequest;
 }
 
-export interface TempleDAppGetCurrentPermissionResponse
-  extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.GetCurrentPermissionResponse;
-  permission: TempleDAppPermission;
+export interface MavrykWalletDAppGetCurrentPermissionResponse
+  extends MavrykWalletDAppMessageBase {
+  type: MavrykWalletDAppMessageType.GetCurrentPermissionResponse;
+  permission: MavrykWalletDAppPermission;
 }
 
-export interface TempleDAppPermissionRequest extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.PermissionRequest;
-  network: TempleDAppNetwork;
-  appMeta: TempleDAppMetadata;
+export interface MavrykWalletDAppPermissionRequest extends MavrykWalletDAppMessageBase {
+  type: MavrykWalletDAppMessageType.PermissionRequest;
+  network: MavrykWalletDAppNetwork;
+  appMeta: MavrykWalletDAppMetadata;
   force?: boolean;
 }
 
-export interface TempleDAppPermissionResponse extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.PermissionResponse;
+export interface MavrykWalletDAppPermissionResponse extends MavrykWalletDAppMessageBase {
+  type: MavrykWalletDAppMessageType.PermissionResponse;
   pkh: string;
   publicKey: string;
   rpc: string;
 }
 
-export interface TempleDAppOperationRequest extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.OperationRequest;
+export interface MavrykWalletDAppOperationRequest extends MavrykWalletDAppMessageBase {
+  type: MavrykWalletDAppMessageType.OperationRequest;
   sourcePkh: string;
   opParams: any[];
 }
 
-export interface TempleDAppOperationResponse extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.OperationResponse;
+export interface MavrykWalletDAppOperationResponse extends MavrykWalletDAppMessageBase {
+  type: MavrykWalletDAppMessageType.OperationResponse;
   opHash: string;
 }
 
-export interface TempleDAppSignRequest extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.SignRequest;
+export interface MavrykWalletDAppSignRequest extends MavrykWalletDAppMessageBase {
+  type: MavrykWalletDAppMessageType.SignRequest;
   sourcePkh: string;
   payload: string;
 }
 
-export interface TempleDAppSignResponse extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.SignResponse;
+export interface MavrykWalletDAppSignResponse extends MavrykWalletDAppMessageBase {
+  type: MavrykWalletDAppMessageType.SignResponse;
   signature: string;
 }
 
-export interface TempleDAppBroadcastRequest extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.BroadcastRequest;
+export interface MavrykWalletDAppBroadcastRequest extends MavrykWalletDAppMessageBase {
+  type: MavrykWalletDAppMessageType.BroadcastRequest;
   signedOpBytes: string;
 }
 
-export interface TempleDAppBroadcastResponse extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.BroadcastResponse;
+export interface MavrykWalletDAppBroadcastResponse extends MavrykWalletDAppMessageBase {
+  type: MavrykWalletDAppMessageType.BroadcastResponse;
   opHash: string;
 }
 
 /**
  * Errors
  */
-export enum TempleDAppErrorType {
+export enum MavrykWalletDAppErrorType {
   NotGranted = "NOT_GRANTED",
   NotFound = "NOT_FOUND",
   InvalidParams = "INVALID_PARAMS",
@@ -106,13 +106,13 @@ export enum TempleDAppErrorType {
  * Misc
  */
 
-export type TempleDAppPermission = {
+export type MavrykWalletDAppPermission = {
   rpc: string;
   pkh: string;
   publicKey: string;
 } | null;
 
-export type TempleDAppNetwork =
+export type MavrykWalletDAppNetwork =
   | "mainnet"
   | "ithacanet"
   | "hangzhounet"
@@ -126,18 +126,18 @@ export type TempleDAppNetwork =
   | "sandbox"
   | { name: string; rpc: string };
 
-export interface TempleDAppMetadata {
+export interface MavrykWalletDAppMetadata {
   name: string;
 }
 
-export interface TemplePageMessage {
-  type: TemplePageMessageType;
+export interface MavrykWalletPageMessage {
+  type: MavrykWalletPageMessageType;
   payload: any;
   reqId?: string | number;
 }
 
-export enum TemplePageMessageType {
-  Request = "TEMPLE_PAGE_REQUEST",
-  Response = "TEMPLE_PAGE_RESPONSE",
-  ErrorResponse = "TEMPLE_PAGE_ERROR_RESPONSE",
+export enum MavrykWalletPageMessageType {
+  Request = "MAVRYK_WALLET_PAGE_REQUEST",
+  Response = "MAVRYK_WALLET_PAGE_RESPONSE",
+  ErrorResponse = "MAVRYK_WALLET_PAGE_ERROR_RESPONSE",
 }

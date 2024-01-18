@@ -1,8 +1,8 @@
 {
-  "name": "@temple-wallet/dapp",
+  "name": "@mavrykdynamics/mavryk-wallet-dapp",
   "author": {
-    "name": "Madfish Solutions",
-    "email": "info@madfish.solutions"
+    "name": "Mavryk Dynamics",
+    "email": "info@mavryk.io"
   },
   "version": "8.0.0",
   "source": "src/index.ts",
@@ -14,12 +14,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madfish-solutions/templewallet-dapp.git"
+    "url": "git+https://github.com/mavryk-network/mavryk-wallet-dapp.git"
   },
   "bugs": {
-    "url": "https://github.com/madfish-solutions/templewallet-dapp/issues"
+    "url": "https://github.com/mavryk-network/mavryk-wallet-dapp/issues"
   },
-  "homepage": "https://github.com/madfish-solutions/templewallet-dapp#readme",
+  "homepage": "https://github.com/mavryk-network/mavryk-wallet-dapp#readme",
   "scripts": {
     "build": "tsc --module commonjs && microbundle build",
     "dev": "microbundle watch",
@@ -31,14 +31,15 @@
     "nanoid": "^3.1.30"
   },
   "devDependencies": {
-    "@taquito/taquito": "^17.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@mavrykdynamics/taquito": "^17.5.0",
     "microbundle": "^0.14.2",
     "typedoc": "^0.17.8",
     "typedoc-plugin-markdown": "^2.3.1",
     "typescript": "^4.3.4"
   },
   "peerDependencies": {
-    "@taquito/taquito": "^17.0.0"
+    "@mavrykdynamics/taquito": "^17.5.0"
   },
   "publishConfig": {
     "access": "public"
