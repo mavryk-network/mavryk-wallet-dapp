@@ -24,4 +24,4 @@ Messages
 
 *Overrides [MavrykWalletDAppMessageBase](mavrykwalletdappmessagebase.md).[type](mavrykwalletdappmessagebase.md#type)*
 
-*Defined in [types.ts:40](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L40)*
+*Defined in [types.ts:40](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L40)*

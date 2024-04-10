@@ -114,15 +114,8 @@ export type MavrykWalletDAppPermission = {
 
 export type MavrykWalletDAppNetwork =
   | "mainnet"
-  | "ithacanet"
-  | "hangzhounet"
-  | "idiazabalnet"
-  | "granadanet"
-  | "edo2net"
-  | "florencenet"
-  | "mumbainet"
-  | "nairobinet"
-  | "ghostnet"
+  | "atlasnet"
+  | "basenet"
   | "sandbox"
   | { name: string; rpc: string };
 

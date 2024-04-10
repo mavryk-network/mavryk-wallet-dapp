@@ -18,4 +18,4 @@
 
 • **name**: *string*
 
-*Defined in [types.ts:127](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L127)*
+*Defined in [types.ts:123](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L123)*

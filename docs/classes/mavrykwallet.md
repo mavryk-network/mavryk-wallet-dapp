@@ -34,8 +34,10 @@
 * [broadcast](mavrykwallet.md#broadcast)
 * [connect](mavrykwallet.md#connect)
 * [formatParameters](mavrykwallet.md#private-formatparameters)
+* [getPK](mavrykwallet.md#getpk)
 * [getPKH](mavrykwallet.md#getpkh)
 * [mapDelegateParamsToWalletParams](mavrykwallet.md#mapdelegateparamstowalletparams)
+* [mapIncreasePaidStorageWalletParams](mavrykwallet.md#mapincreasepaidstoragewalletparams)
 * [mapOriginateParamsToWalletParams](mavrykwallet.md#maporiginateparamstowalletparams)
 * [mapTransferParamsToWalletParams](mavrykwallet.md#maptransferparamstowalletparams)
 * [reconnect](mavrykwallet.md#reconnect)
@@ -50,7 +52,7 @@
 
 \+ **new MavrykWallet**(`appName`: string, `existingPermission?`: [MavrykWalletDAppPermission](../README.md#mavrykwalletdapppermission)): *[MavrykWallet](mavrykwallet.md)*
 
-*Defined in [taquito-wallet.ts:32](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L32)*
+*Defined in [taquito-wallet.ts:34](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L34)*
 
 **Parameters:**
 
@@ -67,7 +69,7 @@ Name | Type |
 
 • **appName**: *string*
 
-*Defined in [taquito-wallet.ts:35](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L35)*
+*Defined in [taquito-wallet.ts:37](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L37)*
 
 ___
 
@@ -75,7 +77,7 @@ ___
 
 • **permission**: *[MavrykWalletDAppPermission](../README.md#mavrykwalletdapppermission)* = null
 
-*Defined in [taquito-wallet.ts:32](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L32)*
+*Defined in [taquito-wallet.ts:34](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L34)*
 
 ___
 
@@ -83,7 +85,7 @@ ___
 
 ▪ **getCurrentPermission**: *[getCurrentPermission](../README.md#getcurrentpermission)* = getCurrentPermission
 
-*Defined in [taquito-wallet.ts:29](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L29)*
+*Defined in [taquito-wallet.ts:31](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L31)*
 
 ___
 
@@ -91,7 +93,7 @@ ___
 
 ▪ **isAvailable**: *[isAvailable](../README.md#isavailable)* = isAvailable
 
-*Defined in [taquito-wallet.ts:27](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L27)*
+*Defined in [taquito-wallet.ts:29](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L29)*
 
 ___
 
@@ -99,7 +101,7 @@ ___
 
 ▪ **onAvailabilityChange**: *[onAvailabilityChange](../README.md#onavailabilitychange)* = onAvailabilityChange
 
-*Defined in [taquito-wallet.ts:28](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L28)*
+*Defined in [taquito-wallet.ts:30](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L30)*
 
 ___
 
@@ -107,7 +109,7 @@ ___
 
 ▪ **onPermissionChange**: *[onPermissionChange](../README.md#onpermissionchange)* = onPermissionChange
 
-*Defined in [taquito-wallet.ts:30](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L30)*
+*Defined in [taquito-wallet.ts:32](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L32)*
 
 ## Accessors
 
@@ -115,7 +117,7 @@ ___
 
 • **get connected**(): *boolean*
 
-*Defined in [taquito-wallet.ts:43](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L43)*
+*Defined in [taquito-wallet.ts:45](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L45)*
 
 **Returns:** *boolean*
 
@@ -125,7 +127,7 @@ ___
 
 ▸ **broadcast**(`signedOpBytes`: string): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:112](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L112)*
+*Defined in [taquito-wallet.ts:131](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L131)*
 
 **Parameters:**
 
@@ -141,7 +143,7 @@ ___
 
 ▸ **connect**(`network`: [MavrykWalletDAppNetwork](../README.md#mavrykwalletdappnetwork), `opts`: object): *Promise‹void›*
 
-*Defined in [taquito-wallet.ts:54](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L54)*
+*Defined in [taquito-wallet.ts:56](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L56)*
 
 **Parameters:**
 
@@ -161,7 +163,7 @@ ___
 
 ▸ **formatParameters**(`params`: any): *any*
 
-*Defined in [taquito-wallet.ts:117](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L117)*
+*Defined in [taquito-wallet.ts:136](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L136)*
 
 **Parameters:**
 
@@ -173,11 +175,21 @@ Name | Type |
 
 ___
 
+###  getPK
+
+▸ **getPK**(): *Promise‹string›*
+
+*Defined in [taquito-wallet.ts:74](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L74)*
+
+**Returns:** *Promise‹string›*
+
+___
+
 ###  getPKH
 
 ▸ **getPKH**(): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:67](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L67)*
+*Defined in [taquito-wallet.ts:69](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L69)*
 
 **Returns:** *Promise‹string›*
 
@@ -187,7 +199,7 @@ ___
 
 ▸ **mapDelegateParamsToWalletParams**(`params`: function): *Promise‹any›*
 
-*Defined in [taquito-wallet.ts:92](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L92)*
+*Defined in [taquito-wallet.ts:99](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L99)*
 
 **Parameters:**
 
@@ -199,11 +211,27 @@ ___
 
 ___
 
+###  mapIncreasePaidStorageWalletParams
+
+▸ **mapIncreasePaidStorageWalletParams**(`params`: function): *Promise‹any›*
+
+*Defined in [taquito-wallet.ts:109](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L109)*
+
+**Parameters:**
+
+▪ **params**: *function*
+
+▸ (): *Promise‹WalletIncreasePaidStorageParams›*
+
+**Returns:** *Promise‹any›*
+
+___
+
 ###  mapOriginateParamsToWalletParams
 
 ▸ **mapOriginateParamsToWalletParams**(`params`: function): *Promise‹any›*
 
-*Defined in [taquito-wallet.ts:82](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L82)*
+*Defined in [taquito-wallet.ts:89](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L89)*
 
 **Parameters:**
 
@@ -219,7 +247,7 @@ ___
 
 ▸ **mapTransferParamsToWalletParams**(`params`: function): *Promise‹any›*
 
-*Defined in [taquito-wallet.ts:72](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L72)*
+*Defined in [taquito-wallet.ts:79](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L79)*
 
 **Parameters:**
 
@@ -235,7 +263,7 @@ ___
 
 ▸ **reconnect**(`network`: [MavrykWalletDAppNetwork](../README.md#mavrykwalletdappnetwork)): *Promise‹void›*
 
-*Defined in [taquito-wallet.ts:63](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L63)*
+*Defined in [taquito-wallet.ts:65](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L65)*
 
 **Parameters:**
 
@@ -251,7 +279,7 @@ ___
 
 ▸ **removeDefaultParams**(`params`: WalletTransferParams | WalletOriginateParams | WalletDelegateParams, `operatedParams`: any): *any*
 
-*Defined in [taquito-wallet.ts:130](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L130)*
+*Defined in [taquito-wallet.ts:149](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L149)*
 
 **Parameters:**
 
@@ -268,7 +296,7 @@ ___
 
 ▸ **sendOperations**(`opParams`: any[]): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:102](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L102)*
+*Defined in [taquito-wallet.ts:121](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L121)*
 
 **Parameters:**
 
@@ -284,7 +312,7 @@ ___
 
 ▸ **sign**(`payload`: string): *Promise‹string›*
 
-*Defined in [taquito-wallet.ts:107](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L107)*
+*Defined in [taquito-wallet.ts:126](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L126)*
 
 **Parameters:**
 
@@ -300,6 +328,6 @@ ___
 
 ▸ **toTezos**(): *TezosToolkit‹›*
 
-*Defined in [taquito-wallet.ts:47](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L47)*
+*Defined in [taquito-wallet.ts:49](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L49)*
 
 **Returns:** *TezosToolkit‹›*

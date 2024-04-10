@@ -23,7 +23,7 @@
 
 • **appMeta**: *[MavrykWalletDAppMetadata](mavrykwalletdappmetadata.md)*
 
-*Defined in [types.ts:52](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L52)*
+*Defined in [types.ts:52](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L52)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **force**? : *undefined | false | true*
 
-*Defined in [types.ts:53](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L53)*
+*Defined in [types.ts:53](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L53)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **network**: *[MavrykWalletDAppNetwork](../README.md#mavrykwalletdappnetwork)*
 
-*Defined in [types.ts:51](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L51)*
+*Defined in [types.ts:51](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L51)*
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 *Overrides [MavrykWalletDAppMessageBase](mavrykwalletdappmessagebase.md).[type](mavrykwalletdappmessagebase.md#type)*
 
-*Defined in [types.ts:50](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L50)*
+*Defined in [types.ts:50](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L50)*

@@ -13,11 +13,11 @@
 ### Classes
 
 * [InvalidParamsMavrykWalletError](classes/invalidparamsmavrykwalleterror.md)
+* [MavrykWallet](classes/mavrykwallet.md)
+* [MavrykWalletError](classes/mavrykwalleterror.md)
 * [NotConnectedMavrykWalletError](classes/notconnectedmavrykwalleterror.md)
 * [NotFoundMavrykWalletError](classes/notfoundmavrykwalleterror.md)
 * [NotGrantedMavrykWalletError](classes/notgrantedmavrykwalleterror.md)
-* [MavrykWallet](classes/mavrykwallet.md)
-* [MavrykWalletError](classes/mavrykwalleterror.md)
 
 ### Interfaces
 
@@ -67,15 +67,15 @@
 
 Ƭ **MavrykWalletDAppMessage**: *[MavrykWalletDAppRequest](README.md#mavrykwalletdapprequest) | [MavrykWalletDAppResponse](README.md#mavrykwalletdappresponse)*
 
-*Defined in [types.ts:1](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L1)*
+*Defined in [types.ts:1](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L1)*
 
 ___
 
 ###  MavrykWalletDAppNetwork
 
-Ƭ **MavrykWalletDAppNetwork**: *"mainnet" | "ithacanet" | "hangzhounet" | "idiazabalnet" | "granadanet" | "edo2net" | "florencenet" | "sandbox" | object*
+Ƭ **MavrykWalletDAppNetwork**: *"mainnet" | "atlasnet" | "basenet" | "sandbox" | object*
 
-*Defined in [types.ts:115](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L115)*
+*Defined in [types.ts:115](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L115)*
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 Ƭ **MavrykWalletDAppPermission**: *object | null*
 
-*Defined in [types.ts:109](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L109)*
+*Defined in [types.ts:109](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L109)*
 
 Misc
 
@@ -93,7 +93,7 @@ ___
 
 Ƭ **MavrykWalletDAppRequest**: *[MavrykWalletDAppGetCurrentPermissionRequest](interfaces/mavrykwalletdappgetcurrentpermissionrequest.md) | [MavrykWalletDAppPermissionRequest](interfaces/mavrykwalletdapppermissionrequest.md) | [MavrykWalletDAppOperationRequest](interfaces/mavrykwalletdappoperationrequest.md) | [MavrykWalletDAppSignRequest](interfaces/mavrykwalletdappsignrequest.md) | [MavrykWalletDAppBroadcastRequest](interfaces/mavrykwalletdappbroadcastrequest.md)*
 
-*Defined in [types.ts:3](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L3)*
+*Defined in [types.ts:3](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L3)*
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 Ƭ **MavrykWalletDAppResponse**: *[MavrykWalletDAppGetCurrentPermissionResponse](interfaces/mavrykwalletdappgetcurrentpermissionresponse.md) | [MavrykWalletDAppPermissionResponse](interfaces/mavrykwalletdapppermissionresponse.md) | [MavrykWalletDAppOperationResponse](interfaces/mavrykwalletdappoperationresponse.md) | [MavrykWalletDAppSignResponse](interfaces/mavrykwalletdappsignresponse.md) | [MavrykWalletDAppBroadcastResponse](interfaces/mavrykwalletdappbroadcastresponse.md)*
 
-*Defined in [types.ts:10](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L10)*
+*Defined in [types.ts:10](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L10)*
 
 ## Functions
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **assertConnected**(`perm`: [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission)): *asserts perm*
 
-*Defined in [taquito-wallet.ts:156](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L156)*
+*Defined in [taquito-wallet.ts:175](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L175)*
 
 **Parameters:**
 
@@ -125,7 +125,7 @@ ___
 
 ▸ **assertResponse**(`condition`: any): *asserts condition*
 
-*Defined in [client.ts:204](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L204)*
+*Defined in [client.ts:204](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L204)*
 
 **Parameters:**
 
@@ -139,9 +139,9 @@ ___
 
 ###  createError
 
-▸ **createError**(`payload`: any): *[MavrykWalletError](classes/mavrykwalleterror.md)‹›*
+▸ **createError**(`payload`: any): *[MavrykWalletError](classes/mavrykwalleterror.md)‹› | TezosOperationError‹›*
 
-*Defined in [client.ts:179](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L179)*
+*Defined in [client.ts:179](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L179)*
 
 **Parameters:**
 
@@ -149,7 +149,7 @@ Name | Type |
 ------ | ------ |
 `payload` | any |
 
-**Returns:** *[MavrykWalletError](classes/mavrykwalleterror.md)‹›*
+**Returns:** *[MavrykWalletError](classes/mavrykwalleterror.md)‹› | TezosOperationError‹›*
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **formatOpParams**(`op`: any): *any*
 
-*Defined in [taquito-wallet.ts:162](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L162)*
+*Defined in [taquito-wallet.ts:181](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L181)*
 
 **Parameters:**
 
@@ -173,7 +173,7 @@ ___
 
 ▸ **getCurrentPermission**(): *Promise‹null | object›*
 
-*Defined in [client.ts:82](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L82)*
+*Defined in [client.ts:82](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L82)*
 
 **Returns:** *Promise‹null | object›*
 
@@ -183,7 +183,7 @@ ___
 
 ▸ **isAvailable**(): *Promise‹boolean›*
 
-*Defined in [client.ts:15](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L15)*
+*Defined in [client.ts:15](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L15)*
 
 **Returns:** *Promise‹boolean›*
 
@@ -193,7 +193,7 @@ ___
 
 ▸ **onAvailabilityChange**(`callback`: function): *(Anonymous function)*
 
-*Defined in [client.ts:42](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L42)*
+*Defined in [client.ts:42](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L42)*
 
 **Parameters:**
 
@@ -215,7 +215,7 @@ ___
 
 ▸ **onPermissionChange**(`callback`: function): *(Anonymous function)*
 
-*Defined in [client.ts:62](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L62)*
+*Defined in [client.ts:62](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L62)*
 
 **Parameters:**
 
@@ -237,7 +237,7 @@ ___
 
 ▸ **permissionsAreEqual**(`aPerm`: [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission), `bPerm`: [MavrykWalletDAppPermission](README.md#mavrykwalletdapppermission)): *boolean*
 
-*Defined in [client.ts:171](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L171)*
+*Defined in [client.ts:171](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L171)*
 
 **Parameters:**
 
@@ -254,7 +254,7 @@ ___
 
 ▸ **request**(`payload`: [MavrykWalletDAppRequest](README.md#mavrykwalletdapprequest)): *Promise‹[MavrykWalletDAppGetCurrentPermissionResponse](interfaces/mavrykwalletdappgetcurrentpermissionresponse.md) | [MavrykWalletDAppPermissionResponse](interfaces/mavrykwalletdapppermissionresponse.md) | [MavrykWalletDAppOperationResponse](interfaces/mavrykwalletdappoperationresponse.md) | [MavrykWalletDAppSignResponse](interfaces/mavrykwalletdappsignresponse.md) | [MavrykWalletDAppBroadcastResponse](interfaces/mavrykwalletdappbroadcastresponse.md)›*
 
-*Defined in [client.ts:140](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L140)*
+*Defined in [client.ts:140](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L140)*
 
 **Parameters:**
 
@@ -270,7 +270,7 @@ ___
 
 ▸ **requestBroadcast**(`signedOpBytes`: string): *Promise‹string›*
 
-*Defined in [client.ts:131](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L131)*
+*Defined in [client.ts:131](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L131)*
 
 **Parameters:**
 
@@ -286,7 +286,7 @@ ___
 
 ▸ **requestOperation**(`sourcePkh`: string, `opParams`: any): *Promise‹string›*
 
-*Defined in [client.ts:111](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L111)*
+*Defined in [client.ts:111](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L111)*
 
 **Parameters:**
 
@@ -303,7 +303,7 @@ ___
 
 ▸ **requestPermission**(`network`: [MavrykWalletDAppNetwork](README.md#mavrykwalletdappnetwork), `appMeta`: [MavrykWalletDAppMetadata](interfaces/mavrykwalletdappmetadata.md), `force`: boolean): *Promise‹object›*
 
-*Defined in [client.ts:92](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L92)*
+*Defined in [client.ts:92](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L92)*
 
 **Parameters:**
 
@@ -321,7 +321,7 @@ ___
 
 ▸ **requestSign**(`sourcePkh`: string, `payload`: string): *Promise‹string›*
 
-*Defined in [client.ts:121](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L121)*
+*Defined in [client.ts:121](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L121)*
 
 **Parameters:**
 
@@ -338,7 +338,7 @@ ___
 
 ▸ **send**(`msg`: [MavrykWalletPageMessage](interfaces/mavrykwalletpagemessage.md)): *void*
 
-*Defined in [client.ts:210](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L210)*
+*Defined in [client.ts:210](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L210)*
 
 **Parameters:**
 

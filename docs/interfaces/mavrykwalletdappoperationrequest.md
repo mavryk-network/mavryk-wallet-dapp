@@ -22,7 +22,7 @@
 
 • **opParams**: *any[]*
 
-*Defined in [types.ts:66](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L66)*
+*Defined in [types.ts:66](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L66)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **sourcePkh**: *string*
 
-*Defined in [types.ts:65](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L65)*
+*Defined in [types.ts:65](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L65)*
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 *Overrides [MavrykWalletDAppMessageBase](mavrykwalletdappmessagebase.md).[type](mavrykwalletdappmessagebase.md#type)*
 
-*Defined in [types.ts:64](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L64)*
+*Defined in [types.ts:64](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L64)*

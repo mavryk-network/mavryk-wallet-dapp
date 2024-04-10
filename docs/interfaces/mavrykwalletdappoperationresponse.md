@@ -21,7 +21,7 @@
 
 • **opHash**: *string*
 
-*Defined in [types.ts:71](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L71)*
+*Defined in [types.ts:71](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L71)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 *Overrides [MavrykWalletDAppMessageBase](mavrykwalletdappmessagebase.md).[type](mavrykwalletdappmessagebase.md#type)*
 
-*Defined in [types.ts:70](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L70)*
+*Defined in [types.ts:70](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L70)*

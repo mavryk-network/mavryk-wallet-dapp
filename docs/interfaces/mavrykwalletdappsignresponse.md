@@ -21,7 +21,7 @@
 
 • **signature**: *string*
 
-*Defined in [types.ts:82](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L82)*
+*Defined in [types.ts:82](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L82)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 *Overrides [MavrykWalletDAppMessageBase](mavrykwalletdappmessagebase.md).[type](mavrykwalletdappmessagebase.md#type)*
 
-*Defined in [types.ts:81](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L81)*
+*Defined in [types.ts:81](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L81)*

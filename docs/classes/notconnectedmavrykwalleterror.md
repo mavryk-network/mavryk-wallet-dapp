@@ -27,7 +27,7 @@
 
 *Overrides [MavrykWalletError](mavrykwalleterror.md).[message](mavrykwalleterror.md#message)*
 
-*Defined in [taquito-wallet.ts:152](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L152)*
+*Defined in [taquito-wallet.ts:171](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L171)*
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 *Overrides [MavrykWalletError](mavrykwalleterror.md).[name](mavrykwalleterror.md#name)*
 
-*Defined in [taquito-wallet.ts:151](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L151)*
+*Defined in [taquito-wallet.ts:170](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/taquito-wallet.ts#L170)*

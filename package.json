@@ -4,7 +4,7 @@
     "name": "Mavryk Dynamics",
     "email": "info@mavryk.io"
   },
-  "version": "8.0.0",
+  "version": "8.0.1",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",

@@ -27,7 +27,7 @@
 
 *Overrides [MavrykWalletError](mavrykwalleterror.md).[message](mavrykwalleterror.md#message)*
 
-*Defined in [client.ts:221](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L221)*
+*Defined in [client.ts:221](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L221)*
 
 ___
 
@@ -37,4 +37,4 @@ ___
 
 *Overrides [MavrykWalletError](mavrykwalleterror.md).[name](mavrykwalleterror.md#name)*
 
-*Defined in [client.ts:220](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/client.ts#L220)*
+*Defined in [client.ts:220](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/client.ts#L220)*

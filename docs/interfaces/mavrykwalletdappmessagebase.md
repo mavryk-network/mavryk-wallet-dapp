@@ -38,4 +38,4 @@
 
 • **type**: *[MavrykWalletDAppMessageType](../enums/mavrykwalletdappmessagetype.md)*
 
-*Defined in [types.ts:18](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L18)*
+*Defined in [types.ts:18](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L18)*

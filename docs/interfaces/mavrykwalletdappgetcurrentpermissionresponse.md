@@ -21,7 +21,7 @@
 
 • **permission**: *[MavrykWalletDAppPermission](../README.md#mavrykwalletdapppermission)*
 
-*Defined in [types.ts:46](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L46)*
+*Defined in [types.ts:46](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L46)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 *Overrides [MavrykWalletDAppMessageBase](mavrykwalletdappmessagebase.md).[type](mavrykwalletdappmessagebase.md#type)*
 
-*Defined in [types.ts:45](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L45)*
+*Defined in [types.ts:45](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L45)*

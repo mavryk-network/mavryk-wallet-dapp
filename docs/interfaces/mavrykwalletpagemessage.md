@@ -20,7 +20,7 @@
 
 • **payload**: *any*
 
-*Defined in [types.ts:132](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L132)*
+*Defined in [types.ts:128](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L128)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **reqId**? : *string | number*
 
-*Defined in [types.ts:133](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L133)*
+*Defined in [types.ts:129](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L129)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **type**: *[MavrykWalletPageMessageType](../enums/mavrykwalletpagemessagetype.md)*
 
-*Defined in [types.ts:131](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/0871fa5/src/types.ts#L131)*
+*Defined in [types.ts:127](https://github.com/mavryk-network/mavryk-wallet-dapp/blob/7884173/src/types.ts#L127)*
