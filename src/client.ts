@@ -1,15 +1,15 @@
 import { nanoid } from "nanoid";
-import { TezosOperationError } from "@taquito/taquito";
+import { TezosOperationError } from "@mavrykdynamics/taquito";
 import {
-  TemplePageMessageType,
-  TemplePageMessage,
-  TempleDAppMessageType,
-  TempleDAppRequest,
-  TempleDAppResponse,
-  TempleDAppErrorType,
-  TempleDAppNetwork,
-  TempleDAppMetadata,
-  TempleDAppPermission,
+  MavrykWalletPageMessageType,
+  MavrykWalletPageMessage,
+  MavrykWalletDAppMessageType,
+  MavrykWalletDAppRequest,
+  MavrykWalletDAppResponse,
+  MavrykWalletDAppErrorType,
+  MavrykWalletDAppNetwork,
+  MavrykWalletDAppMetadata,
+  MavrykWalletDAppPermission,
 } from "./types";
 
 export function isAvailable() {
@@ -17,7 +17,7 @@ export function isAvailable() {
     const handleMessage = (evt: MessageEvent) => {
       if (
         evt.source === window &&
-        evt.data?.type === TemplePageMessageType.Response &&
+        evt.data?.type === MavrykWalletPageMessageType.Response &&
         evt.data?.payload === "PONG"
       ) {
         done(true);
@@ -31,7 +31,7 @@ export function isAvailable() {
     };
 
     send({
-      type: TemplePageMessageType.Request,
+      type: MavrykWalletPageMessageType.Request,
       payload: "PING",
     });
     window.addEventListener("message", handleMessage);
@@ -60,10 +60,10 @@ export function onAvailabilityChange(callback: (available: boolean) => void) {
 }
 
 export function onPermissionChange(
-  callback: (permission: TempleDAppPermission) => void
+  callback: (permission: MavrykWalletDAppPermission) => void
 ) {
   let t: any;
-  let currentPerm: TempleDAppPermission = null;
+  let currentPerm: MavrykWalletDAppPermission = null;
   const check = async () => {
     try {
       const perm = await getCurrentPermission();
@@ -81,26 +81,26 @@ export function onPermissionChange(
 
 export async function getCurrentPermission() {
   const res = await request({
-    type: TempleDAppMessageType.GetCurrentPermissionRequest,
+    type: MavrykWalletDAppMessageType.GetCurrentPermissionRequest,
   });
   assertResponse(
-    res.type === TempleDAppMessageType.GetCurrentPermissionResponse
+    res.type === MavrykWalletDAppMessageType.GetCurrentPermissionResponse
   );
   return res.permission;
 }
 
 export async function requestPermission(
-  network: TempleDAppNetwork,
-  appMeta: TempleDAppMetadata,
+  network: MavrykWalletDAppNetwork,
+  appMeta: MavrykWalletDAppMetadata,
   force: boolean
 ) {
   const res = await request({
-    type: TempleDAppMessageType.PermissionRequest,
+    type: MavrykWalletDAppMessageType.PermissionRequest,
     network,
     appMeta,
     force,
   });
-  assertResponse(res.type === TempleDAppMessageType.PermissionResponse);
+  assertResponse(res.type === MavrykWalletDAppMessageType.PermissionResponse);
   return {
     rpc: res.rpc,
     pkh: res.pkh,
@@ -110,48 +110,48 @@ export async function requestPermission(
 
 export async function requestOperation(sourcePkh: string, opParams: any) {
   const res = await request({
-    type: TempleDAppMessageType.OperationRequest,
+    type: MavrykWalletDAppMessageType.OperationRequest,
     sourcePkh,
     opParams,
   });
-  assertResponse(res.type === TempleDAppMessageType.OperationResponse);
+  assertResponse(res.type === MavrykWalletDAppMessageType.OperationResponse);
   return res.opHash;
 }
 
 export async function requestSign(sourcePkh: string, payload: string) {
   const res = await request({
-    type: TempleDAppMessageType.SignRequest,
+    type: MavrykWalletDAppMessageType.SignRequest,
     sourcePkh,
     payload,
   });
-  assertResponse(res.type === TempleDAppMessageType.SignResponse);
+  assertResponse(res.type === MavrykWalletDAppMessageType.SignResponse);
   return res.signature;
 }
 
 export async function requestBroadcast(signedOpBytes: string) {
   const res = await request({
-    type: TempleDAppMessageType.BroadcastRequest,
+    type: MavrykWalletDAppMessageType.BroadcastRequest,
     signedOpBytes,
   });
-  assertResponse(res.type === TempleDAppMessageType.BroadcastResponse);
+  assertResponse(res.type === MavrykWalletDAppMessageType.BroadcastResponse);
   return res.opHash;
 }
 
-function request(payload: TempleDAppRequest) {
-  return new Promise<TempleDAppResponse>((resolve, reject) => {
+function request(payload: MavrykWalletDAppRequest) {
+  return new Promise<MavrykWalletDAppResponse>((resolve, reject) => {
     const reqId = nanoid();
     const handleMessage = (evt: MessageEvent) => {
-      const res = evt.data as TemplePageMessage;
+      const res = evt.data as MavrykWalletPageMessage;
       switch (true) {
         case evt.source !== window || res?.reqId !== reqId:
           return;
 
-        case res?.type === TemplePageMessageType.Response:
+        case res?.type === MavrykWalletPageMessageType.Response:
           resolve(res.payload);
           window.removeEventListener("message", handleMessage);
           break;
 
-        case res?.type === TemplePageMessageType.ErrorResponse:
+        case res?.type === MavrykWalletPageMessageType.ErrorResponse:
           reject(createError(res.payload));
           window.removeEventListener("message", handleMessage);
           break;
@@ -159,7 +159,7 @@ function request(payload: TempleDAppRequest) {
     };
 
     send({
-      type: TemplePageMessageType.Request,
+      type: MavrykWalletPageMessageType.Request,
       payload,
       reqId,
     });
@@ -169,8 +169,8 @@ function request(payload: TempleDAppRequest) {
 }
 
 function permissionsAreEqual(
-  aPerm: TempleDAppPermission,
-  bPerm: TempleDAppPermission
+  aPerm: MavrykWalletDAppPermission,
+  bPerm: MavrykWalletDAppPermission
 ) {
   if (aPerm === null) return bPerm === null;
   return aPerm.pkh === bPerm?.pkh && aPerm.rpc === bPerm?.rpc;
@@ -178,17 +178,17 @@ function permissionsAreEqual(
 
 function createError(payload: any) {
   switch (true) {
-    case payload === TempleDAppErrorType.NotGranted:
-      return new NotGrantedTempleWalletError();
+    case payload === MavrykWalletDAppErrorType.NotGranted:
+      return new NotGrantedMavrykWalletError();
 
-    case payload === TempleDAppErrorType.NotFound:
-      return new NotFoundTempleWalletError();
+    case payload === MavrykWalletDAppErrorType.NotFound:
+      return new NotFoundMavrykWalletError();
 
-    case payload === TempleDAppErrorType.InvalidParams:
-      return new InvalidParamsTempleWalletError();
+    case payload === MavrykWalletDAppErrorType.InvalidParams:
+      return new InvalidParamsMavrykWalletError();
 
     case Array.isArray(payload) &&
-      payload[0] === TempleDAppErrorType.TezosOperation &&
+      payload[0] === MavrykWalletDAppErrorType.TezosOperation &&
       Array.isArray(payload[1]) &&
       payload[1].length > 0:
       return new TezosOperationError(payload[1]);
@@ -197,7 +197,7 @@ function createError(payload: any) {
       return new Error(payload.replace("__tezos__", ""));
 
     default:
-      return new TempleWalletError();
+      return new MavrykWalletError();
   }
 }
 
@@ -207,26 +207,26 @@ function assertResponse(condition: any): asserts condition {
   }
 }
 
-function send(msg: TemplePageMessage) {
+function send(msg: MavrykWalletPageMessage) {
   window.postMessage(msg, "*");
 }
 
-export class TempleWalletError implements Error {
-  name = "TempleWalletError";
+export class MavrykWalletError implements Error {
+  name = "MavrykWalletError";
   message = "An unknown error occured. Please try again or report it";
 }
 
-export class NotGrantedTempleWalletError extends TempleWalletError {
-  name = "NotGrantedTempleWalletError";
+export class NotGrantedMavrykWalletError extends MavrykWalletError {
+  name = "NotGrantedMavrykWalletError";
   message = "Permission Not Granted";
 }
 
-export class NotFoundTempleWalletError extends TempleWalletError {
-  name = "NotFoundTempleWalletError";
+export class NotFoundMavrykWalletError extends MavrykWalletError {
+  name = "NotFoundMavrykWalletError";
   message = "Account Not Found. Try connect again";
 }
 
-export class InvalidParamsTempleWalletError extends TempleWalletError {
-  name = "InvalidParamsTempleWalletError";
+export class InvalidParamsMavrykWalletError extends MavrykWalletError {
+  name = "InvalidParamsMavrykWalletError";
   message = "Some of the parameters you provided are invalid";
 }
